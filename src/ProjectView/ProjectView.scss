@@ -1,0 +1,31 @@
+@import "node_modules/azure-devops-ui/Core/_platformCommon.scss";
+
+.project-pivot {
+    font-size: $fontSizeM;
+    margin: 0 25px;
+}
+
+.flex {
+    display: flex;
+}
+
+.project-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project-tags .bolt-list-cell-content {
+    padding: 16px;
+}
+
+.project-tags .bolt-list-row {
+    box-shadow: 0 1px 0 $neutral-10;
+}
+
+.project-tags {
+    background-color: $neutral-6;
+}
+
+.project-tags .project-image img {
+    border-radius: 4px;
+}

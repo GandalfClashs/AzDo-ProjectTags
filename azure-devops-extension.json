@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "tags-for-projects",
+    "publisher": "MichaelKahle",
+    "version": "1.0.71",
+    "name": "Tags for Projects",
+    "description": "Tag management for projects in Azure DevOps",
+     "icons": {
+        "default": "static/ic_fluent_tag_48_regular.png"
+    },
+    "categories": [
+        "Azure Repos",
+        "Azure Boards",
+        "Azure Pipelines",
+        "Azure Test Plans",
+        "Azure Artifacts"
+    ],
+    "scopes": [
+        "vso.project"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "files": [
+        {
+            "path": "static",
+            "addressable": true
+        },
+        {
+            "path": "dist",
+            "addressable": true
+        }
+    ]
+}

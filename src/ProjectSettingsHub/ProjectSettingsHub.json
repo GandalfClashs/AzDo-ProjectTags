@@ -1,0 +1,15 @@
+{
+    "contributions": [
+        {
+            "id": "project-tags-project-admin-hub",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                "ms.vss-web.project-admin-hub-group"
+            ],
+            "properties": {
+                "name": "Project Tags Assignments",
+                "uri": "dist/ProjectSettingsHub/ProjectSettingsHub.html"
+            }
+        }
+    ]
+}
