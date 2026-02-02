@@ -9,11 +9,7 @@ import { Page } from "azure-devops-ui/Page";
 import { showRootComponent } from "../Common";
 import { ProjectTagPicker } from "../Components/ProjectTagPicker";
 
-interface IProjectAdminHubGroup {
-  projectContext: any;
-}
-
-class ProjectAdminHubGroup extends React.Component<{}, IProjectAdminHubGroup> {
+class ProjectAdminHubGroup extends React.Component<{}> {
   constructor(props: {}) {
     super(props);
   }
@@ -24,15 +20,15 @@ class ProjectAdminHubGroup extends React.Component<{}, IProjectAdminHubGroup> {
 
   public render(): JSX.Element {
     return (
-      <Page className="sample-hub flex-grow">
+      <Page className="flex-grow">
         <Header titleSize={TitleSize.Large} title="Project Tags Assignments" />
         <div className="page-content">
           <div className="webcontext-section">
-            <h3>Assignments visible for all users:</h3>
+            <h3>Assignments visible for all users (Organization Tags):</h3>
             <ProjectTagPicker organizationTags={true} />
           </div>
           <div className="webcontext-section">
-            <h3>Assignments visible only for you:</h3>
+            <h3>Assignments visible only for you (Your Tags):</h3>
             <ProjectTagPicker organizationTags={false} />
           </div>
         </div>

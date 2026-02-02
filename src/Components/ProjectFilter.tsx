@@ -153,7 +153,7 @@ export default class ProjectFilter extends React.Component<IProjectFilterProps> 
               filter={this.filter}
               items={this.userTagsForFilter}
               selection={this.selectionUserTagsList}
-              placeholder="User Tags"
+              placeholder="Your Tags"
             />
 
             <DropdownFilterBarItem

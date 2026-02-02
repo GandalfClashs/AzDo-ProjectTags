@@ -2,11 +2,16 @@
     "manifestVersion": 1,
     "id": "tags-for-projects",
     "publisher": "MichaelKahle",
-    "version": "1.0.71",
+    "version": "1.0.78",
     "name": "Tags for Projects",
-    "description": "Tag management for projects in Azure DevOps",
-     "icons": {
-        "default": "static/ic_fluent_tag_48_regular.png"
+    "public": true,
+    "description": "An extension to manage projects in Azure DevOps with tags. Supports filtering projects by tags. Tags can be visible for all users of an organization or user specific.",
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/GandalfClashs/AzDo-ProjectTags"
+    },
+    "icons": {
+        "default": "static/tag_logo.png"
     },
     "categories": [
         "Azure Repos",
@@ -14,6 +19,12 @@
         "Azure Pipelines",
         "Azure Test Plans",
         "Azure Artifacts"
+    ],
+    "tags": [
+        "projects",
+        "tags",
+        "filter",
+        "organize"
     ],
     "scopes": [
         "vso.project"
@@ -23,6 +34,14 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],
+    "content": {
+        "details": {
+            "path": "README.md"
+        },
+        "license": {
+            "path": "./LICENSE"
+        }
+    },
     "files": [
         {
             "path": "static",
@@ -31,6 +50,15 @@
         {
             "path": "dist",
             "addressable": true
+        },
+        {
+            "path": "images",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/azure-devops-extension-sdk",
+            "addressable": true,
+            "packagePath": "lib"
         }
     ]
 }

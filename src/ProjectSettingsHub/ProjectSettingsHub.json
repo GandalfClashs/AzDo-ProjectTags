@@ -8,7 +8,11 @@
             ],
             "properties": {
                 "name": "Project Tags Assignments",
-                "uri": "dist/ProjectSettingsHub/ProjectSettingsHub.html"
+                "uri": "dist/ProjectSettingsHub/ProjectSettingsHub.html",
+                "icon": {
+                    "light": "static/tag_logo.png",
+                    "dark": "static/tag_logo.png"
+                }
             }
         }
     ]

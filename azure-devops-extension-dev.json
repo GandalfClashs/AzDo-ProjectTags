@@ -1,26 +1,28 @@
 {
     "manifestVersion": 1,
-    "id": "samples-dev",
-    "publisher": "ms-samples",
-    "version": "1.0.396",
-    "name": "Extension Sample [DEV]",
-    "description": "Azure DevOps extension sample. For development purposes only.",
+    "id": "tags-for-projects-dev",
+    "publisher": "MichaelKahle",
+    "version": "1.0.71",
+    "name": "Tags for Projects [DEV]",
+    "description": "An extension to manage projects in Azure DevOps with tags. Supports filtering projects by tags. Tags can be visible for all users of an organization or user specific.",
+    "icons": {
+        "default": "static/tag_logo.png"
+    },
     "categories": [
-        "Azure Pipelines"
+        "Azure Repos",
+        "Azure Boards",
+        "Azure Pipelines",
+        "Azure Test Plans",
+        "Azure Artifacts"
+    ],
+    "scopes": [
+        "vso.project"
     ],
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
         }
     ],
-    "icons": {
-        "default": "logo.png"
-    },
-    "content": {
-        "details": {
-            "path": "overview.md"
-        }
-    },
     "files": [
         {
             "path": "static",
@@ -31,5 +33,10 @@
             "addressable": true
         }
     ],
+    "content": {
+        "details": {
+            "path": "README.md"
+        }
+    },
     "baseUri": "https://localhost:3000"
 }
