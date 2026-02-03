@@ -78,7 +78,7 @@ class ProjectViewPivot extends React.Component<{}, IPivotContentState> {
       CommonServiceIds.HostNavigationService,
     );
     this.projectInfos = [];
-    for (let project of projects) {
+    for (let project of projects.sort((a, b) => a.name.localeCompare(b.name))) {
       this.projectInfos.push({
         project: project,
       });

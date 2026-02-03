@@ -27,7 +27,8 @@
         "organize"
     ],
     "scopes": [
-        "vso.project"
+        "vso.project",
+        "vso.profile"
     ],
     "targets": [
         {
