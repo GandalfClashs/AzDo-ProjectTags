@@ -2,7 +2,7 @@
 
 .project-pivot {
   font-size: $fontSizeM;
-  margin: 0 25px;
+  margin: 0 32px;
 }
 
 .flex {
@@ -26,6 +26,7 @@
   background-color: $neutral-6;
   display: "flex";
   height: "auto";
+  border-radius: 4px;  
 }
 
 .project-link .bolt-image {

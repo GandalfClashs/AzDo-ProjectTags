@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "tags-for-projects",
     "publisher": "MichaelKahle",
-    "version": "1.0.84",
+    "version": "1.0.85",
     "name": "Tags for Projects",
     "public": true,
     "description": "An extension to manage projects in Azure DevOps with tags. Supports filtering projects by tags. Tags can be visible for all users of an organization or user specific.",
