@@ -136,10 +136,7 @@ class ProjectViewPivot extends React.Component<{}, IPivotContentState> {
         {!this.state.loading && (
           <div>
             <ProjectFilter onFilterChanged={this.updateListFilter} />
-            <div
-              style={{ display: "flex", height: "auto" }}
-              className="project-tags"
-            >
+            <div className="project-tags">
               <ScrollableList
                 itemProvider={this.filteredProjects}
                 renderRow={this.renderRow}
@@ -147,6 +144,7 @@ class ProjectViewPivot extends React.Component<{}, IPivotContentState> {
                 showScroll={false}
               />
             </div>
+            <div style={{ height: "16px" }}></div>
           </div>
         )}
       </div>
