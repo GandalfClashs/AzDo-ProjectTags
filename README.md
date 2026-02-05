@@ -10,6 +10,7 @@ The extension can be installed from the [marketplace](https://marketplace.visual
 
 It required the "Project and team (read)" permission to get all projects of the user.
 Assigned tags are saved as extension settings.
+If the images in the project list don't load you might need to allow third-party cookies for dev.azure.com in your browser.
 
 ## How to use
 Two types of tags are supported:
@@ -29,10 +30,10 @@ The "Save filter" button saves the current filter which will then be applied eve
 Tags can be assigned to projects in the project settings:
 ![Tag assignments](images/tags_settings.png)
 
-# Contributing
+## Contributing
 
 Feedback, ideas, and contributions are welcome. If you discover a bug, have a suggestion, or miss a feature, please open an issue.
 
-# License
+## License
 
 This extension is licensed under the [MIT](LICENSE) license.

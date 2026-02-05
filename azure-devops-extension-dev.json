@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "tags-for-projects-dev",
     "publisher": "MichaelKahle",
-    "version": "1.0.75",
+    "version": "1.0.77",
     "name": "Tags for Projects [DEV]",
     "description": "An extension to manage projects in Azure DevOps with tags. Supports filtering projects by tags. Tags can be visible for all users of an organization or user specific.",
     "icons": {
@@ -16,8 +16,7 @@
         "Azure Artifacts"
     ],
     "scopes": [
-        "vso.project",
-        "vso.profile"
+        "vso.project"
     ],
     "targets": [
         {
