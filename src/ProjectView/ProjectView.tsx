@@ -151,6 +151,19 @@ class ProjectViewPivot extends React.Component<{}, IPivotContentState> {
     );
   }
 
+  private navigateToProject(projectName: string, newWindow: boolean) {
+    if (newWindow) {
+      this.navService!.openNewWindow(
+        `https://dev.azure.com/${this.orgName}/${projectName}`,
+        "_blank",
+      );
+    } else {
+      this.navService!.navigate(
+        `https://dev.azure.com/${this.orgName}/${projectName}`,
+      );
+    }
+  }
+
   private renderRow = (
     index: number,
     item: IProjectInformation,
@@ -165,11 +178,13 @@ class ProjectViewPivot extends React.Component<{}, IPivotContentState> {
       >
         <div
           className="flex flex-column flex-grow project-link"
-          onClick={() =>
-            this.navService!.navigate(
-              `https://dev.azure.com/${this.orgName}/${item.project.name}`,
-            )
-          }
+          onClick={() => this.navigateToProject(item.project.name, false)}
+          onMouseDown={(e) => {
+            if (e.button === 1) {
+              e.preventDefault();
+              this.navigateToProject(item.project.name, true);
+            }
+          }}
         >
           <div className="top-row flex flex-noshrink">
             <Image
