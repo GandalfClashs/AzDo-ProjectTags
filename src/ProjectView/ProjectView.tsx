@@ -47,7 +47,6 @@ interface IProjectInformation {
 }
 
 class ProjectViewPivot extends React.Component<{}, IPivotContentState> {
-  private orgName: string = "";
   private navService?: IHostNavigationService;
   private filteredProjects = new ObservableArray<
     | IProjectInformation
@@ -62,7 +61,6 @@ class ProjectViewPivot extends React.Component<{}, IPivotContentState> {
 
   public async componentDidMount() {
     await SDK.init({ loaded: false });
-    this.orgName = SDK.getHost().name;
     this.initializeComponent();
   }
 
@@ -151,16 +149,17 @@ class ProjectViewPivot extends React.Component<{}, IPivotContentState> {
     );
   }
 
-  private navigateToProject(projectName: string, newWindow: boolean) {
+  private navigateToProject(project: TeamProjectReference, newWindow: boolean) {
+    // project.url is the REST API URL, e.g.:
+    //   Cloud:   https://dev.azure.com/{org}/_apis/projects/{id}
+    //   On-prem: https://server/{collection}/_apis/projects/{id}
+    // Splitting on /_apis/ yields the correct collection base for both environments.
+    const base = project.url.split("/_apis/")[0];
+    const target = `${base}/${project.name}`;
     if (newWindow) {
-      this.navService!.openNewWindow(
-        `https://dev.azure.com/${this.orgName}/${projectName}`,
-        "_blank",
-      );
+      this.navService!.openNewWindow(target, "_blank");
     } else {
-      this.navService!.navigate(
-        `https://dev.azure.com/${this.orgName}/${projectName}`,
-      );
+      this.navService!.navigate(target);
     }
   }
 
@@ -178,11 +177,11 @@ class ProjectViewPivot extends React.Component<{}, IPivotContentState> {
       >
         <div
           className="flex flex-column flex-grow project-link"
-          onClick={() => this.navigateToProject(item.project.name, false)}
+          onClick={() => this.navigateToProject(item.project, false)}
           onMouseDown={(e) => {
             if (e.button === 1) {
               e.preventDefault();
-              this.navigateToProject(item.project.name, true);
+              this.navigateToProject(item.project, true);
             }
           }}
         >
